@@ -1,0 +1,50 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+    <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+               <div class="filter">
+                <a href="/pedidos"><i class="fas fa-angle-double-left"></i> Todos os pedidos</a>
+               </div>
+            </div>
+            
+            <div class="form-title text-center">
+                <h2 class="text-dark">Atualizar Pedido</h2>
+                <span class="text-light">Use o formulário abaixo para atualizar um pedido</span>
+            </div>
+
+            <!-- adicionar formulário de pedido -->
+            <!-- Form Handling -->
+<form method="POST" id="update_pedido">
+    <div class="novo_pedido">
+        <div class="form-group">
+            <label for="nome" class="text-light">Nome</label>
+            <input type="hidden" name="id" value="<%= pedido._id %>">
+            <input type="text" name="nome" value="<%= pedido.nome %>" placeholder="Nome da obra">
+        </div>
+
+        <div class="form-group">
+            <label for="nomeDoArtista" class="text-light">Artista</label>
+            <input type="text" name="nomeDoArtista" value="<%= pedido.nomeDoArtista %>" placeholder="Nome do criador da obra">
+        </div>
+
+        <div class="form-group">
+            <label for="tipo" class="text-light">Tipo</label>
+            <input type="text" name="tipo" value="<%= pedido.tipo %>" placeholder="Pintura, escultura, desenho, etc">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Salvar</button>
+        </div>
+    </div>
+</form>
+        </div>
+    </main>
+    <!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

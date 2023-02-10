@@ -1,0 +1,38 @@
+<!-- include header -->
+    <%- include('include/_header') %>
+<!-- /include header -->
+
+<!-- Main Site -->
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/adc-pedido" class="border-shadow">
+                <span class="text-gradient">Fazer Pedido <i class="fa-solid fa-palette"></i></span>
+            </a>
+        </div>
+
+        <!-- Form Handling -->
+        <form action="/" method="POST">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th class="thid">ID</th>
+                        <th>Nome da obra</th>
+                        <th>Artista</th>
+                        <th>Tipo</th>
+                        <th class="thacao">Ação</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <%- include('include/_show') %>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+    <%- include('include/_footer') %>
+<!-- /include footer -->

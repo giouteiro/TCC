@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo</title>
+    <link rel="stylesheet" href="css/acervo.css">
+</head>
+<body>
+
+    <header>
+        <div id="title">
+            <h1>Vivarte</h1>
+        </div>
+
+        <ul>
+            <a href="/" id="link"><li>Início</li></a>
+            <a href="http://localhost:3000/pedidos" id="link"><li>Pedir uma obra</li></a>
+            <%if(!Usuario){%>
+            <a href="http://localhost:3000/auth/register" id="link"><li>Crie sua conta</li></a>
+            <a href="http://localhost:3000/auth/login" id="link"><li>Login</li></a>
+            <%}else{%>
+                <%=Usuario.nome%><a href="#" id="link"><li class="sair">Deslogar</li></a>
+            <%}%>
+            
+        </ul>
+    </header>
+    
+    <section id="blog">
+
+        <div class="blog-container">
+        
+        <%Acervos.forEach(function(acervo){%>
+        <div class="blog-box">
+            <div class="blog-img">
+            <img src="img/lescarpolette.png">
+            </div>
+            <div class="blog-text">
+            <span><%=acervo.nomeDoArtista%></span>
+            <a href="#" class="blog-title"><%=acervo.nome%></a>
+            <h6 class="nomeobra"><%=acervo.nomeOriginal%></h6>
+            <p><%=acervo.texto%></p>
+            <a href="#">Ler mais</a>
+            </div>
+        </div>
+        <%})%>
+
+        </div>
+
+    </section>
+    
+</body>
+</html>

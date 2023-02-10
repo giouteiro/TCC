@@ -1,0 +1,18 @@
+<% for (var i = 0; i < pedidos.length; i++) { %>
+
+<tr>
+    <td><%= i + 1 %></td>
+    <td><%= pedidos[i].nome %></td>
+    <td><%= pedidos[i].nomeDoArtista %></td>
+    <td><%= pedidos[i].tipo %></td>
+    <td class="botoes">
+        <a href="/update-pedido?id=<%= pedidos[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
+        </a>
+        <a class="btn border-shadow delete" data-id = <%= pedidos[i]._id%> >
+            <span class="text-gradient"><i class="fas fa-times"></i></span>
+        </a>
+    </td>
+</tr>
+
+<% } %>

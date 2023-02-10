@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <header>
+        <div id="title">
+            <h1>Vivarte</h1>
+        </div>
+
+        <ul>
+            <a href="/" id="link"><li>Início</li></a>
+            <a href="http://localhost:3000/pedidos" id="link"><li>Pedir uma obra</li></a>
+            <a href="http://localhost:3000/acervo" id="link"><li>Acervo</li></a>
+        </ul>
+    </header>
+
+    <div class="container">
+
+        <div class="illustration">
+            <img src="/img/mask.png" alt="mask">
+        </div>
+
+        <div class="form">
+
+            <form method="post">
+                
+                <div class="form-header">
+
+                    <div class="title">
+                        <h1>Crie sua conta!</h1>
+                    </div>
+
+                    <div class="botaologin">
+                        <div class="login-button">
+                        <button><a href="http://localhost:3000/auth/login">Login</a></button>
+                        </div>
+                        <h6 class="naoconta">Já tem conta?</h6>
+                    </div>
+
+                </div>
+
+                <div class="input-group">
+
+                    <div class="input-box">
+                        <label for="firstname">Nome</label>
+                        <input type="text" name="nome" id="name" placeholder="Digite seu nome" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="email">E-mail</label>
+                        <input type="email" name="email" id="email" placeholder="nome@exemplo.com" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="password">Senha</label>
+                        <input type="password" name="senha" id="password" placeholder="Crie uma senha" required>
+                    </div>
+
+                    <div class="input-box">
+                        <label for="confpass">Confirme sua senha</label>
+                        <input type="password" name="confsenha" id="confpass" placeholder="Repita sua senha" required>
+                    </div>
+
+                </div>
+                <div class="continue-button">
+                    <input type="submit" value="Cadastrar">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
