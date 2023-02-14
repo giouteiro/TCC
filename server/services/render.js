@@ -54,3 +54,7 @@ exports.abrederkuss = (req, res) => {
 exports.abreadmin = (req, res) => {
     res.render('admin')
 }
+
+exports.abreacervoadmin = (req, res) => {
+    res.render('acervoadmin')
+}

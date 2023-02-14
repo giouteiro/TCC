@@ -21,8 +21,6 @@ var schema = new mongoose.Schema({
     }
 })
 
-//aaaaa
-
 const Tipodb = mongoose.model('tipodb', schema);
 
 module.exports = Tipodb;

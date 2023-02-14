@@ -33,7 +33,7 @@ route.get('/update-pedido', services.update_pedido);
 //API
 route.post('/api/pedidos', controller.create);
 route.get('/api/pedidos/:iduser', controller.find);
-route.put('/api/pedidos/:id', controller.update);
+route.put('/api/pedidos/:iduser', controller.update);
 route.delete('/api/pedidos/:id', controller.delete);
 
 route.post('/adm', admcontroller.createadm)
@@ -57,6 +57,7 @@ route.post('/derkuss')
 route.get('/derkuss', services.abrederkuss)
 
 route.get('/admin', services.abreadmin)
-route.get('/admin/acervo')
+route.get('/admin/acervo', services.abreacervoadmin)
+route.post('/admin/acervo', admcontroller.createadm)
 
 module.exports = route

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acervo Admin</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <h1>ADMINISTRADOR</h1>
+
+    <form action="/admin/acervo" method="POST" id="adc_pedido">
+        <div class="novo_pedido">
+            <div class="form-group">
+                <label for="nome" class="text-light">Nome</label>
+                <input type="text" name="nome" value="" placeholder="Nome da obra">
+            </div>
+
+            <div class="form-group">
+                <label for="nomeOriginal" class="text-light">Nome original</label>
+                <input type="text" name="nomeOriginal" value="" placeholder="Nome original obra">
+            </div>
+    
+            <div class="form-group">
+                <label for="nomeDoArtista" class="text-light">Artista</label>
+                <input type="text" name="nomeDoArtista" value="" placeholder="Nome do criador da obra">
+            </div>
+
+            <div class="form-group">
+                <label for="texto" class="text-light">Texto</label>
+                <input type="text" name="texto" value="" placeholder="Breve descrição da obra">
+            </div>
+
+            <div class="form-group imgob">
+                <label for="imagemObra" class="imagemObra">Imagem</label>
+                <input type="file" name="imagemObra" id="imagemObra">
+            </div>
+
+            <div class="form-group select">
+                <select name="tipo">
+                    <option selected disabled>Selecione um tipo</option>
+                    <option value="Pintura">Pintura</option>
+                    <option value="Gravura">Gravura</option>
+                    <option value="desenho">Desenho</option>
+                    <option value="Escultura">Escultura</option>
+                    <option value="Cerâmica">Cerâmica</option>
+                    <option value="Fotografia">Fotografia</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <button type="submit" class="btn text-dark update">Salvar</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
