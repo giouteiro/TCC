@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt')
 
 passport.use(new LocalStrategy(async function verify(username, password, cb) {
 
+    console.log(username)
     const usuario = await User.findOne({
         email: username
     })
@@ -34,7 +35,7 @@ passport.serializeUser(function (usuario, cb) {
         cb(null, {
             id: usuario._id,
             email: usuario.email,
-            nome: usuario.nome,
+            admin: usuario.admin,
         });
     });
 });

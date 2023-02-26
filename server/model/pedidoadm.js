@@ -27,6 +27,6 @@ var schema = new mongoose.Schema({
     }
 })
 
-const Admdb = mongoose.model('admdb', schema);
+const Pedidoadmdb = mongoose.model('pedidoadmdb', schema);
 
-module.exports = Admdb;
+module.exports = Pedidoadmdb;

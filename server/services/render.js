@@ -1,5 +1,5 @@
 const axios = require('axios');
-var Admdb = require('../model/adm');
+var Pedidoadmdb = require('../model/pedidoadm');
 
 
 exports.homeRoutes = (req, res) => {
@@ -20,7 +20,7 @@ exports.adc_pedido = (req, res) => {
 }
 
 exports.update_pedido = (req, res) => {
-    axios.get('http://localhost:3000/api/pedidos', { params: { id: req.query.id}})
+    axios.get('http://localhost:3000/api/pedidos/'+req.user.id, { params: { id: req.query.id}})
     .then(function(pedidodata){
         res.render("update_pedido", { pedido: pedidodata.data})
     })
@@ -43,7 +43,7 @@ exports.abrehome = (req, res) => {
 
 exports.abreacervo = async (req, res) => {
 
-    const acervos = await Admdb.find({})
+    const acervos = await Pedidoadmdb.find({})
     res.render('acervo', {Acervos:acervos, Usuario:req.user})
 }
 
@@ -51,8 +51,8 @@ exports.abrederkuss = (req, res) => {
     res.render('derkuss')
 }
 
-exports.abreadmin = (req, res) => {
-    res.render('admin')
+exports.abreloginadmin = (req, res) => {
+    res.render('adminlogin')
 }
 
 exports.abreacervoadmin = (req, res) => {

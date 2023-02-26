@@ -27,6 +27,11 @@
         </ul>
     </header>
     
+            <div class="busca">
+                <input type="search" class="search"placeholder="Procure uma obra">
+            <button class="searchbtn"><img src="/img/search.svg" class="imgsearch"></button>
+            </div>
+
     <section id="blog">
 
         <div class="blog-container">
@@ -34,14 +39,14 @@
         <%Acervos.forEach(function(acervo){%>
         <div class="blog-box">
             <div class="blog-img">
-            <img src="img/lescarpolette.png">
+            <img src="img/<%=acervo.imagemObra%>">
             </div>
             <div class="blog-text">
             <span><%=acervo.nomeDoArtista%></span>
             <h1 class="blog-title"><%=acervo.nome%></h1>
             <h6 class="nomeobra"><%=acervo.nomeOriginal%></h6>
             <p><%=acervo.texto%></p>
-            <a href="#">Ler mais</a>
+            <a href="/acervo/<%=acervo._id%>">Ler mais</a>
             </div>
         </div>
         <%})%>

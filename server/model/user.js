@@ -16,7 +16,11 @@ var schema = new mongoose.Schema({
     pedidos:{
         type:[mongoose.Schema.Types.ObjectId],
         ref: 'pedidodb'
-    } 
+    },
+    admin:{
+        type: 'Boolean',
+        default:false
+    }
 })
 
 const User = mongoose.model('userdb', schema);

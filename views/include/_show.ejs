@@ -6,7 +6,7 @@
     <td><%= pedidos[i].nomeDoArtista %></td>
     <td><%= pedidos[i].tipo %></td>
     <td class="botoes">
-        <a href="/update-pedido?id=<%= pedidos[i]._id%>" class="btn border-shadow update">
+        <a href="/update-pedido/<%= pedidos[i]._id%>/?id=<%= pedidos[i]._id%>" class="btn border-shadow update">
             <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
         </a>
         <a class="btn border-shadow delete" data-id = <%= pedidos[i]._id%> >

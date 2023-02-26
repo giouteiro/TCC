@@ -131,10 +131,39 @@ body{
 }
 
 .sair {
-    background-color: rgb(87, 84, 180);
+    background-color: rgb(2, 0, 57);
     color: white;
     height: 35px;
     width: 90px;
     border-radius: 10px;
     font-weight: 500;
+    padding-top: 7px;
+    padding-left: 1.7%;
+}
+
+.search {
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 30px;
+    text-align: center;
+    outline: none;
+  }
+
+  .searchbtn {
+    border: none;
+    outline: none;
+    padding-left: 10px;
+  }
+
+  .busca {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 300px;
+  }
+
+  .imgsearch {
+    height: 30px;
+    width: 30px;
 }

@@ -74,13 +74,13 @@ exports.update = (req, res) => {
             .send({ message: "O campo não pode ficar vazio!"})
     }
 
-    const id = req.params.id;
+    const id = req.params.iduser;
     Pedidodb.findByIdAndUpdate(id, req.body, {useFindAndModify: false})
     .then(data => {
         if(!data){
             res.status(404).send({ message: `Não foi possível pedido com $(id). Talvez o pedido não tenha sido encontrado!`})
         }else {
-            res.send(data)
+            res.redirect('/pedidos')
         }
     })
     .catch(err => {
